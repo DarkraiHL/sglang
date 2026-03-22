@@ -1091,7 +1091,7 @@ class ServerArgs:
         if self.dllm_algorithm is not None:
             self.disable_piecewise_cuda_graph = True
         # 12. CPU offload (breaks dynamo)
-        if self.cpu_offload_gb > 0 or self.enable_hierarchical_cache:
+        if self.cpu_offload_gb > 0:
             self.disable_piecewise_cuda_graph = True
         # 13. Deterministic inference
         if self.enable_deterministic_inference:
